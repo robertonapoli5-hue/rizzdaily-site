@@ -87,8 +87,15 @@ repository; the app shows an identical copy inside the app. When the policy chan
 
 1. Update `docs/PRIVACY_POLICY.md` in the app repository (and its in-app copy — a test there fails
    if the two differ), including the **Last updated** date.
-2. Regenerate `privacy-policy.html` from it so the website, the app and Play Console always say the
-   same thing, then commit and push here. GitHub Pages republishes automatically.
+2. Regenerate `privacy-policy.html` from it with the app repository's converter, so the website,
+   the app and Play Console always say the same thing:
+
+   ```bash
+   python3 docs/tools/policy_to_html.py docs/PRIVACY_POLICY.md ../rizzdaily-site/privacy-policy.html
+   ```
+
+   (run from the app repository, with this one checked out next to it). `git diff` here should
+   show only the text you changed; then commit and push. GitHub Pages republishes automatically.
 
 The developer named in the policy and in the site footer is **Level Up Solution LLC**; privacy
 questions go to **contact@level-up-solution.com**. If either changes, update it in the app's policy
