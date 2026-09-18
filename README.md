@@ -90,5 +90,6 @@ repository; the app shows an identical copy inside the app. When the policy chan
 2. Regenerate `privacy-policy.html` from it so the website, the app and Play Console always say the
    same thing, then commit and push here. GitHub Pages republishes automatically.
 
-Before the first public release, the two placeholders — the developer's **legal name** and the
-**privacy contact email** — must be filled in, both in the app's policy and on this site.
+The developer named in the policy and in the site footer is **Level Up Solution LLC**; privacy
+questions go to **contact@level-up-solution.com**. If either changes, update it in the app's policy
+first, then here.
